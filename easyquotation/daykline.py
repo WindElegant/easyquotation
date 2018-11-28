@@ -27,7 +27,7 @@ class DayKline(basequotation.BaseQuotation):
     @property
     def stock_api(self) -> str:
         # pylint: disable=line-too-long
-        return "http://web.ifzq.gtimg.cn/appstock/app/hkfqkline/get?_var=kline_dayqfq&param="
+        return "http://web.ifzq.gtimg.cn/appstock/app/fqkline/get?_var=kline_dayqfq&param="
 
     def _gen_stock_prefix(self, stock_codes, day=1500):
         return ["hk{},day,,,{},qfq".format(code, day) for code in stock_codes]
